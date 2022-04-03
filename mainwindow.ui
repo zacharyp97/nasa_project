@@ -6,21 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1300</width>
-    <height>680</height>
+    <width>1304</width>
+    <height>669</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label_pic">
+   <widget class="QLabel" name="label_date">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>30</y>
-      <width>661</width>
-      <height>371</height>
+      <x>30</x>
+      <y>270</y>
+      <width>331</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -30,8 +30,8 @@
    <widget class="QPushButton" name="btnHDImage">
     <property name="geometry">
      <rect>
-      <x>1190</x>
-      <y>310</y>
+      <x>180</x>
+      <y>600</y>
       <width>80</width>
       <height>24</height>
      </rect>
@@ -40,16 +40,116 @@
      <string>HD Image</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_apodTitle">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>320</y>
+      <width>461</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_apodImage">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>20</y>
+      <width>471</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_apodDesc">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>380</y>
+      <width>521</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_neowTitle">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>20</y>
+      <width>481</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_neowDateTime">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>80</y>
+      <width>481</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_missDistance">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>140</y>
+      <width>481</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_isHazardous">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>200</y>
+      <width>481</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1300</width>
+     <width>1304</width>
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuNASA_APIs">
+    <property name="title">
+     <string>NASA APIs</string>
+    </property>
+   </widget>
+   <addaction name="menuNASA_APIs"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

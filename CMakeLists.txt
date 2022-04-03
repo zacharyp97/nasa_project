@@ -20,9 +20,6 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
-        subwindow.h
-        subwindow.cpp
-        subwindow.ui
         apifunc.h
         apifunc.cpp
 )
