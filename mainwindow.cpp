@@ -72,7 +72,8 @@ MainWindow::MainWindow(QWidget *parent)
     }
 
     //get Asteroid Picture of the Day
-    QString strReply = fetchAPI("https://api.nasa.gov/planetary/apod?date="+apiYear+"-"+apiMonth+"-"+apiDay+"&api_key=avATca9BNlLaVcNC09cMNwL4MAwBeXhBcWZh9Ih9");
+    QString apiKey = "api_key=avATca9BNlLaVcNC09cMNwL4MAwBeXhBcWZh9Ih9";
+    QString strReply = fetchAPI("https://api.nasa.gov/planetary/apod?date="+apiYear+"-"+apiMonth+"-"+apiDay+"&"+apiKey);
     QJsonDocument jsonResponse = QJsonDocument::fromJson(strReply.toUtf8());
     jsonAPOD = jsonResponse.object();
 
@@ -97,7 +98,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     //get Near Earth Object
     QString apiDayNEOW = QString::number(curDate.day());
-    strReply = fetchAPI("https://api.nasa.gov/neo/rest/v1/feed?start_date="+apiYear+"-"+apiMonth+"-"+apiDayNEOW+"&end_date="+apiYear+"-"+apiMonth+"-"+apiDay+"&api_key=avATca9BNlLaVcNC09cMNwL4MAwBeXhBcWZh9Ih9");
+    strReply = fetchAPI("https://api.nasa.gov/neo/rest/v1/feed?start_date="+apiYear+"-"+apiMonth+"-"+apiDayNEOW+"&end_date="+apiYear+"-"+apiMonth+"-"+apiDay+"&"+apiKey);
     jsonResponse = QJsonDocument::fromJson(strReply.toUtf8());
     jsonNEOW = jsonResponse.object();
     QJsonObject nearEarthObjects = jsonNEOW["near_earth_objects"].toObject();
