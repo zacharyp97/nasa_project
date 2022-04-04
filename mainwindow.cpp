@@ -77,6 +77,20 @@ MainWindow::MainWindow(QWidget *parent)
     QJsonDocument jsonResponse = QJsonDocument::fromJson(strReply.toUtf8());
     jsonAPOD = jsonResponse.object();
 
+    if(jsonAPOD.contains("code"))
+    {
+        if(jsonAPOD["code"].toInt() == 404){
+            qDebug() << "ERROR 404: "<< jsonAPOD << "\n";
+
+            apiDay = QString::number(curDate.day()-1);
+
+            strReply = fetchAPI("https://api.nasa.gov/planetary/apod?date="+apiYear+"-"+apiMonth+"-"+apiDay+"&"+apiKey);
+            jsonResponse = QJsonDocument::fromJson(strReply.toUtf8());
+            jsonAPOD = jsonResponse.object();
+        }
+
+    }
+
     //set the apod title for the message box
     QString apodTitleMsg = "APOD Title: " + jsonAPOD["title"].toString() + "\n";
 
